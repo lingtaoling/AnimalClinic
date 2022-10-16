@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PetClinicdbModelStoreContainer" CdmEntityContainer="PetClinicdbConnection">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vet_id" ColumnName="vet_id" />
+          <ScalarProperty Name="owner_id" ColumnName="owner_id" />
+          <ScalarProperty Name="pet_id" ColumnName="pet_id" />
+          <ScalarProperty Name="when" ColumnName="when" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Avatars">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Avatar">
+        <MappingFragment StoreEntitySet="Avatar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drugs">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Drug">
+        <MappingFragment StoreEntitySet="Drug">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Owners">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Owner">
+        <MappingFragment StoreEntitySet="Owner">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pets">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Pet">
+        <MappingFragment StoreEntitySet="Pet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner_id" ColumnName="owner_id" />
+          <ScalarProperty Name="avatar_id" ColumnName="avatar_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescriptions">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Prescription">
+        <MappingFragment StoreEntitySet="Prescription">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="appointment_id" ColumnName="appointment_id" />
+          <ScalarProperty Name="drug_id" ColumnName="drug_id" />
+          <ScalarProperty Name="quantity_sold" ColumnName="quantity_sold" />
+          <ScalarProperty Name="price_sold" ColumnName="price_sold" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PetClinicdbModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vets">
+      <EntityTypeMapping TypeName="PetClinicdbModel.Vet">
+        <MappingFragment StoreEntitySet="Vet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="specialization" ColumnName="specialization" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

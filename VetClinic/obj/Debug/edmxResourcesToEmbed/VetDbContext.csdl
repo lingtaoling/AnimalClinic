@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PetClinicdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="vet_id" Type="Int32" Nullable="false" />
+    <Property Name="owner_id" Type="Int32" Nullable="false" />
+    <Property Name="pet_id" Type="Int32" Nullable="false" />
+    <Property Name="when" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Pet" Relationship="Self.FK_Appointment_Pet" FromRole="Appointment" ToRole="Pet" />
+  </EntityType>
+  <EntityType Name="Avatar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Drug">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prescriptions" Relationship="Self.FK_Prescription_Drug" FromRole="Drug" ToRole="Prescription" />
+  </EntityType>
+  <EntityType Name="Owner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="Int32" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Pets" Relationship="Self.FK_Pet_Owner" FromRole="Owner" ToRole="Pet" />
+  </EntityType>
+  <EntityType Name="Pet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="owner_id" Type="Int32" Nullable="false" />
+    <Property Name="avatar_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="Int32" Nullable="false" />
+    <Property Name="dob" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK_Appointment_Pet" FromRole="Pet" ToRole="Appointment" />
+    <NavigationProperty Name="Owner" Relationship="Self.FK_Pet_Owner" FromRole="Pet" ToRole="Owner" />
+  </EntityType>
+  <EntityType Name="Prescription">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="appointment_id" Type="Int32" Nullable="false" />
+    <Property Name="drug_id" Type="Int32" Nullable="false" />
+    <Property Name="quantity_sold" Type="Int32" />
+    <Property Name="price_sold" Type="Int32" />
+    <NavigationProperty Name="Drug" Relationship="Self.FK_Prescription_Drug" FromRole="Prescription" ToRole="Drug" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="phone" Type="Int32" Nullable="false" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vets" Relationship="Self.FK_Vet_User" FromRole="User" ToRole="Vet" />
+  </EntityType>
+  <EntityType Name="Vet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="startdate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Vet_User" FromRole="Vet" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_Appointment_Pet">
+    <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pet">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="pet_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Drug">
+    <End Role="Drug" Type="Self.Drug" Multiplicity="1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drug">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="drug_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pet_Owner">
+    <End Role="Owner" Type="Self.Owner" Multiplicity="1" />
+    <End Role="Pet" Type="Self.Pet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Pet">
+        <PropertyRef Name="owner_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vet_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Vet" Type="Self.Vet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Vet">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PetClinicdbConnection" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="Avatars" EntityType="Self.Avatar" />
+    <EntitySet Name="Drugs" EntityType="Self.Drug" />
+    <EntitySet Name="Owners" EntityType="Self.Owner" />
+    <EntitySet Name="Pets" EntityType="Self.Pet" />
+    <EntitySet Name="Prescriptions" EntityType="Self.Prescription" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Vets" EntityType="Self.Vet" />
+    <AssociationSet Name="FK_Appointment_Pet" Association="Self.FK_Appointment_Pet">
+      <End Role="Pet" EntitySet="Pets" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Drug" Association="Self.FK_Prescription_Drug">
+      <End Role="Drug" EntitySet="Drugs" />
+      <End Role="Prescription" EntitySet="Prescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pet_Owner" Association="Self.FK_Pet_Owner">
+      <End Role="Owner" EntitySet="Owners" />
+      <End Role="Pet" EntitySet="Pets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vet_User" Association="Self.FK_Vet_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Vet" EntitySet="Vets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
