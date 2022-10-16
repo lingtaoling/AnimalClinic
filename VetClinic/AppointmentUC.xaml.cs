@@ -16,28 +16,13 @@ using System.Windows.Shapes;
 namespace VetClinic
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AppointmentUC : UserControl
     {
-        public MainWindow()
+        public AppointmentUC()
         {
             InitializeComponent();
-        }
-
-        private void BtnAppointment_Click(object sender, RoutedEventArgs e)
-        {
-            CC.Content = new AppointmentUC();
-        }
-
-        private void BtnDoctor_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnHome_Click(object sender, RoutedEventArgs e)
-        {
-            CC.Content = new HomeUC();
         }
     }
 }

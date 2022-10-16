@@ -64,9 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AdminUC.xaml.cs">
-      <DependentUpon>AdminUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Appointment.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
     </Compile>
@@ -75,6 +72,12 @@
     </Compile>
     <Compile Include="Drug.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentUC.xaml.cs">
+      <DependentUpon>AppointmentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeUC.xaml.cs">
+      <DependentUpon>HomeUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Owner.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
@@ -106,7 +109,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VetDbContext.edmx</DependentUpon>
     </Compile>
-    <Page Include="AdminUC.xaml">
+    <Page Include="AppointmentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

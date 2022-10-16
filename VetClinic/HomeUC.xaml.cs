@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace VetClinic
 {
     /// <summary>
-    /// Interaction logic for AdminUC.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class AdminUC : UserControl
+    public partial class HomeUC : UserControl
     {
-        public AdminUC()
+        public HomeUC()
         {
             InitializeComponent();
         }

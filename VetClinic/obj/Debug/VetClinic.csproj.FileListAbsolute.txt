@@ -20,5 +20,7 @@ C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetCli
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.csproj.CopyComplete
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.exe
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.pdb
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUC.g.cs
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUC.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.g.cs
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.g.cs
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.baml
