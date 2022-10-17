@@ -7,11 +7,15 @@ C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\bin\Debug\Entity
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.csproj.AssemblyReference.cache
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.csproj.SuggestedBindingRedirects.cache
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.g.cs
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.g.cs
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\MainWindow.g.cs
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\App.g.cs
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic_Content.g.cs
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic_MarkupCompile.cache
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic_MarkupCompile.lref
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.baml
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\MainWindow.baml
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.g.resources
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.Properties.Resources.resources
@@ -20,7 +24,3 @@ C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetCli
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.csproj.CopyComplete
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.exe
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.pdb
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.g.cs
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.g.cs
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.baml
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\HomeUC.baml

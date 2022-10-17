@@ -12,7 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
             <StackPanel Background="Beige">
-            <Button Name="Appointment" Content="Appointment" Click="BtnAppointment_Click" Width="100" Height="40" Margin="15,15,0,0"/>
+            <Button Name="Appointments" Content="Appointment" Click="BtnAppointment_Click" Width="100" Height="40" Margin="15,15,0,0"/>
             <Button Name="Home" Content="Home" Click="BtnHome_Click" Width="100" Height="40" Margin="15,15,0,0"/>
         </StackPanel>
             <ContentControl Name="CC" Grid.Column="1" />
