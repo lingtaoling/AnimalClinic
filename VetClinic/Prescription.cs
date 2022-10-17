@@ -21,5 +21,6 @@ namespace VetClinic
         public Nullable<int> price_sold { get; set; }
     
         public virtual Drug Drug { get; set; }
+        public virtual Appointment Appointment { get; set; }
     }
 }

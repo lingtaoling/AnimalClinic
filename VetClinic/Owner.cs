@@ -18,6 +18,7 @@ namespace VetClinic
         public Owner()
         {
             this.Pets = new HashSet<Pet>();
+            this.Appointments = new HashSet<Appointment>();
         }
     
         public int id { get; set; }
@@ -28,5 +29,7 @@ namespace VetClinic
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pet> Pets { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Appointment> Appointments { get; set; }
     }
 }

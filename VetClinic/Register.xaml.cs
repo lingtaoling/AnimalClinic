@@ -53,20 +53,12 @@ namespace VetClinic
             }
             try
             {
-                User newUser= new User();
-                newUser.username = UserNameInput.Text;
-                newUser.email = EmailInput.Text;
-                newUser.name = NameInput.Text;
-                newUser.phone = phone;
-                newUser.password = PasswordInput.Password;
-                newUser.role = role;
-
-
-                 //User newUser = new User(UserNameInput.Text, NameInput.Text, EmailInput.Text, PasswordInput.Password, phone, role);
-                //
-                // dbContext.Users.Add(newUser);
-                // dbContext.SaveChanges(); // SystemException
-                ResetFields();
+                User newUser = new User(UserNameInput.Text, NameInput.Text, EmailInput.Text, PasswordInput.Password, phone, role) ;
+              
+               Globals.dbContext.Users.Add(newUser);
+               Globals.dbContext.SaveChanges(); // SystemException
+                //ResetFields();
+                Globals.registerWindow.Hide();
                 Globals.mainWindow.Show();
 
             }
@@ -111,7 +103,7 @@ namespace VetClinic
                 if (!Regex.IsMatch(password, @"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,50}$"))
 
                 {
-                    MessageBox.Show(this, "At least one upper case english letter • At least one lower case english letter • At least one digit • At least one special character • Minimum 8 in length• Maxinum 50 in length", "Input error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(this, "At least one upper case english letter • At least one lower case english letter • At least one digit • At least one special character • Minimum 8 in length• Maxinum 50 in length", "Input error", MessageBoxButton.OK, MessageBoxImage.Error); // Aaaaa1111**
                     return false;
                 }
 
@@ -146,7 +138,7 @@ namespace VetClinic
                     return false;
                 }
 
-                if(RbnVet.IsChecked == false || RbnAdmin.IsChecked == false)
+                if(RbnVet.IsChecked == false && RbnAdmin.IsChecked == false)
                 {
                 MessageBox.Show(this, "Please choose admin or vet", "Input error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;

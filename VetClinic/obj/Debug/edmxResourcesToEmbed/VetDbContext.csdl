@@ -11,6 +11,9 @@
     <Property Name="when" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Pet" Relationship="Self.FK_Appointment_Pet" FromRole="Appointment" ToRole="Pet" />
+    <NavigationProperty Name="Owner" Relationship="PetClinicdbModel.FK_Appointment_Owner" FromRole="Appointment" ToRole="Owner" />
+    <NavigationProperty Name="Vet" Relationship="PetClinicdbModel.FK_Appointment_Vet" FromRole="Appointment" ToRole="Vet" />
+    <NavigationProperty Name="Prescriptions" Relationship="PetClinicdbModel.FK_Prescription_Appointment" FromRole="Appointment" ToRole="Prescription" />
   </EntityType>
   <EntityType Name="Avatar">
     <Key>
@@ -18,6 +21,7 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Pets" Relationship="PetClinicdbModel.FK_Pet_Avatar" FromRole="Avatar" ToRole="Pet" />
   </EntityType>
   <EntityType Name="Drug">
     <Key>
@@ -39,6 +43,7 @@
     <Property Name="phone" Type="Int32" Nullable="false" />
     <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Pets" Relationship="Self.FK_Pet_Owner" FromRole="Owner" ToRole="Pet" />
+    <NavigationProperty Name="Appointments" Relationship="PetClinicdbModel.FK_Appointment_Owner" FromRole="Owner" ToRole="Appointment" />
   </EntityType>
   <EntityType Name="Pet">
     <Key>
@@ -53,6 +58,7 @@
     <Property Name="dob" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Appointments" Relationship="Self.FK_Appointment_Pet" FromRole="Pet" ToRole="Appointment" />
     <NavigationProperty Name="Owner" Relationship="Self.FK_Pet_Owner" FromRole="Pet" ToRole="Owner" />
+    <NavigationProperty Name="Avatar" Relationship="PetClinicdbModel.FK_Pet_Avatar" FromRole="Pet" ToRole="Avatar" />
   </EntityType>
   <EntityType Name="Prescription">
     <Key>
@@ -64,6 +70,7 @@
     <Property Name="quantity_sold" Type="Int32" />
     <Property Name="price_sold" Type="Int32" />
     <NavigationProperty Name="Drug" Relationship="Self.FK_Prescription_Drug" FromRole="Prescription" ToRole="Drug" />
+    <NavigationProperty Name="Appointment" Relationship="PetClinicdbModel.FK_Prescription_Appointment" FromRole="Prescription" ToRole="Appointment" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -87,6 +94,7 @@
     <Property Name="specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="startdate" Type="DateTime" Precision="0" />
     <NavigationProperty Name="User" Relationship="Self.FK_Vet_User" FromRole="Vet" ToRole="User" />
+    <NavigationProperty Name="Appointments" Relationship="PetClinicdbModel.FK_Appointment_Vet" FromRole="Vet" ToRole="Appointment" />
   </EntityType>
   <Association Name="FK_Appointment_Pet">
     <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
@@ -161,5 +169,69 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Vet" EntitySet="Vets" />
     </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Owner" Association="PetClinicdbModel.FK_Appointment_Owner">
+      <End Role="Owner" EntitySet="Owners" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Vet" Association="PetClinicdbModel.FK_Appointment_Vet">
+      <End Role="Vet" EntitySet="Vets" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Appointment" Association="PetClinicdbModel.FK_Prescription_Appointment">
+      <End Role="Appointment" EntitySet="Appointments" />
+      <End Role="Prescription" EntitySet="Prescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pet_Avatar" Association="PetClinicdbModel.FK_Pet_Avatar">
+      <End Role="Avatar" EntitySet="Avatars" />
+      <End Role="Pet" EntitySet="Pets" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Appointment_Owner">
+    <End Type="PetClinicdbModel.Owner" Role="Owner" Multiplicity="1" />
+    <End Type="PetClinicdbModel.Appointment" Role="Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="owner_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Vet">
+    <End Type="PetClinicdbModel.Vet" Role="Vet" Multiplicity="1" />
+    <End Type="PetClinicdbModel.Appointment" Role="Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vet">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="vet_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Appointment">
+    <End Type="PetClinicdbModel.Appointment" Role="Appointment" Multiplicity="1" />
+    <End Type="PetClinicdbModel.Prescription" Role="Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="appointment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pet_Avatar">
+    <End Type="PetClinicdbModel.Avatar" Role="Avatar" Multiplicity="1" />
+    <End Type="PetClinicdbModel.Pet" Role="Pet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avatar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Pet">
+        <PropertyRef Name="avatar_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -80,6 +80,18 @@
     <Property Name="specialization" Type="nvarchar" MaxLength="50" />
     <Property Name="startdate" Type="date" />
   </EntityType>
+  <Association Name="FK_Appointment_Owner">
+    <End Role="Owner" Type="Self.Owner" Multiplicity="1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Owner">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="owner_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Appointment_Pet">
     <End Role="Pet" Type="Self.Pet" Multiplicity="1" />
     <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
@@ -92,6 +104,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Appointment_Vet">
+    <End Role="Vet" Type="Self.Vet" Multiplicity="1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vet">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="vet_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pet_Avatar">
+    <End Role="Avatar" Type="Self.Avatar" Multiplicity="1" />
+    <End Role="Pet" Type="Self.Pet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Avatar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Pet">
+        <PropertyRef Name="avatar_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Pet_Owner">
     <End Role="Owner" Type="Self.Owner" Multiplicity="1" />
     <End Role="Pet" Type="Self.Pet" Multiplicity="*" />
@@ -101,6 +137,18 @@
       </Principal>
       <Dependent Role="Pet">
         <PropertyRef Name="owner_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prescription_Appointment">
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="1" />
+    <End Role="Prescription" Type="Self.Prescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Prescription">
+        <PropertyRef Name="appointment_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -137,13 +185,29 @@
     <EntitySet Name="Prescription" EntityType="Self.Prescription" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Vet" EntityType="Self.Vet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Appointment_Owner" Association="Self.FK_Appointment_Owner">
+      <End Role="Owner" EntitySet="Owner" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
     <AssociationSet Name="FK_Appointment_Pet" Association="Self.FK_Appointment_Pet">
       <End Role="Pet" EntitySet="Pet" />
       <End Role="Appointment" EntitySet="Appointment" />
     </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Vet" Association="Self.FK_Appointment_Vet">
+      <End Role="Vet" EntitySet="Vet" />
+      <End Role="Appointment" EntitySet="Appointment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pet_Avatar" Association="Self.FK_Pet_Avatar">
+      <End Role="Avatar" EntitySet="Avatar" />
+      <End Role="Pet" EntitySet="Pet" />
+    </AssociationSet>
     <AssociationSet Name="FK_Pet_Owner" Association="Self.FK_Pet_Owner">
       <End Role="Owner" EntitySet="Owner" />
       <End Role="Pet" EntitySet="Pet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prescription_Appointment" Association="Self.FK_Prescription_Appointment">
+      <End Role="Appointment" EntitySet="Appointment" />
+      <End Role="Prescription" EntitySet="Prescription" />
     </AssociationSet>
     <AssociationSet Name="FK_Prescription_Drug" Association="Self.FK_Prescription_Drug">
       <End Role="Drug" EntitySet="Drug" />

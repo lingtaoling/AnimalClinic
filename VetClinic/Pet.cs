@@ -31,5 +31,6 @@ namespace VetClinic
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual Owner Owner { get; set; }
+        public virtual Avatar Avatar { get; set; }
     }
 }

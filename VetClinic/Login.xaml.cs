@@ -46,6 +46,10 @@ namespace VetClinic
         private void BtnLogIn_Click(object sender, RoutedEventArgs e)
         {
 
+            string email = EmailInput.Text;
+            string password = PasswordInput.Password;
+
+
         }
 
         private void BtnSignUp_Click(object sender, RoutedEventArgs e)

@@ -17,6 +17,10 @@
         <AssociationConnector Association="PetClinicdbModel.FK_Prescription_Drug" ManuallyRouted="false" />
         <AssociationConnector Association="PetClinicdbModel.FK_Pet_Owner" ManuallyRouted="false" />
         <AssociationConnector Association="PetClinicdbModel.FK_Vet_User" ManuallyRouted="false" />
+        <AssociationConnector Association="PetClinicdbModel.FK_Appointment_Owner" />
+        <AssociationConnector Association="PetClinicdbModel.FK_Appointment_Vet" />
+        <AssociationConnector Association="PetClinicdbModel.FK_Prescription_Appointment" />
+        <AssociationConnector Association="PetClinicdbModel.FK_Pet_Avatar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

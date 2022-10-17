@@ -14,11 +14,19 @@ namespace VetClinic
     
     public partial class Vet
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Vet()
+        {
+            this.Appointments = new HashSet<Appointment>();
+        }
+    
         public int id { get; set; }
         public int user_id { get; set; }
         public string specialization { get; set; }
         public Nullable<System.DateTime> startdate { get; set; }
     
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Appointment> Appointments { get; set; }
     }
 }
