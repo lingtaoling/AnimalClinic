@@ -23,6 +23,7 @@ namespace VetClinic
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void BtnAdmin_Click(object sender, RoutedEventArgs e)
