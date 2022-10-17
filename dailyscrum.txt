@@ -17,6 +17,16 @@
 3. Where do I need assistance? What do I need to figure out?
 -  How to connect db 
 
+2022/10/17 Kristy
+1. Done / not done since last scrum:
+- Started with main page for admin
+
+2. To do until next Scrum:
+- Finish this page, make sure it is fully functional
+
+3. Where do I need assistance? What do I need to figure out?
+- Review some of the information from relevant classes to be sure I've done everything correctly
+
 
 
 
