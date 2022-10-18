@@ -24,5 +24,21 @@ namespace VetClinic
         {
             InitializeComponent();
         }
+
+
+        private void BtnAppointment_Click(object sender, RoutedEventArgs e)
+        {
+            AppointmentUC newAppointment = new AppointmentUC(
+            TbxName.Text,
+            TbxPName.Text,
+            TbxDoctor.Text,
+            (DateTime)DpAppointment.SelectedDate.Add(
+            (DateTime)TpAppointment.SelectedTime), TbkNotes.Text);
+            LvAppointment.ItemsSource = dbContext.Appointments.ToList();
+            Globals.dbContext.Appointments.Add(newAppointment);
+            Globals.dbContext.SaveChanges();
+
+
+        }
     }
 }

@@ -68,3 +68,10 @@ C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\WpfAnimatedGif.pdb
 C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\WpfAnimatedGif.xml
 =======
 >>>>>>> b76f5c082cd66dcd95346b4865545fb8050b8e91
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUsers.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\Login.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\Register.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\App.baml
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUsers.g.cs
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\Login.g.cs
+C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\Register.g.cs
