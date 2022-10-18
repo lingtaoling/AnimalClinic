@@ -75,15 +75,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-<<<<<<< HEAD
-    <Compile Include="AdminUC.xaml.cs">
-      <DependentUpon>AdminUC.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AdminUsers.xaml.cs">
       <DependentUpon>AdminUsers.xaml</DependentUpon>
     </Compile>
-=======
->>>>>>> b76f5c082cd66dcd95346b4865545fb8050b8e91
     <Compile Include="Appointment.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
     </Compile>
@@ -93,17 +87,14 @@
     <Compile Include="Drug.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Globals.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
-=======
     <Compile Include="AppointmentUC.xaml.cs">
       <DependentUpon>AppointmentUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomeUC.xaml.cs">
       <DependentUpon>HomeUC.xaml</DependentUpon>
->>>>>>> b76f5c082cd66dcd95346b4865545fb8050b8e91
     </Compile>
     <Compile Include="Owner.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
