@@ -90,6 +90,7 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AppointmentUC.xaml.cs">
       <DependentUpon>AppointmentUC.xaml</DependentUpon>
     </Compile>
