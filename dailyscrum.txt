@@ -18,6 +18,28 @@
 
 
 
+
+
+
+
+
+
+2022/10/18 Kristy
+
+1. What I have done / not done since last Scrum?
+Worked on landing page, reviewed class information and Trello
+
+
+2. What I plan to do from this scrum to next? (next 24 hours)
+Continue on this task as well as talk to team to see what will come next
+
+
+3. Where do I need assistance? What do I need to figure out?
+I am having issues with my virtual machine; I will need to troubleshoot. 
+
+
+
+
 ----------------------------------------------------------------------------------
 2022/10/17 Ling
 1. Done / not done since last scrum:
@@ -41,8 +63,19 @@
 - Review some of the information from relevant classes to be sure I've done everything correctly
 
 
+2022/10/17 Edgar
+1. Done / Not Done
+- Set up Db
+- Set up Trello
+- Watched Videos and implemented User Control
+- Watched videos on Grid-splitter
+- Started AppointmentsUC xaml
 
-
+2. To do before next scrum
+- Set up Xaml for make Appointments
+- Implement gridsplitter for view appointments
+- Test User control for other pages 
+- Start and hopefully finish Appointments code behind
 
 
 
