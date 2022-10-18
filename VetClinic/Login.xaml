@@ -61,11 +61,13 @@
                     <PasswordBox Name="PasswordInput" BorderThickness="0 0 0 1.5" BorderBrush="#C5C8CC" materialDesign:HintAssist.FloatingOffset="0,-18" materialDesign:HintAssist.Hint="Password" Password="1234567890" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
 
                     <StackPanel Orientation="Horizontal" Margin="20">
-                        <Button  Name="BtnLogIn" Content="Log In" Background="#42389D" Foreground="#ffffff" FontSize="18" Click="BtnLogIn_Click" materialDesign:ButtonAssist.CornerRadius="22" Height="45" Width="120" Style="{StaticResource MaterialDesignFlatButton}"/>
+                        <Button  Name="BtnLogIn" Content="Log In" Background="#42389D" Foreground="#ffffff" FontSize="18" Click="BtnLogIn_Click" materialDesign:ButtonAssist.CornerRadius="22" Height="45" Width="120" />
+                       
                         <Button  Name="BtnSignUp" Content="or Sign up" materialDesign:ButtonAssist.CornerRadius="22" FontSize="16" Height="45" Width="141" Margin="5 0 0 0" Foreground="#42389D" Click="BtnSignUp_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
                         
                     </StackPanel>
                     <Button  Name="BtnMain" Content="Main Window" materialDesign:ButtonAssist.CornerRadius="22" FontSize="16" Height="45" Width="151" Margin="5 0 0 0" Foreground="#42389D" Click="BtnMain_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
+                    <Button  Name="BtnAdmin" Content="Admin" materialDesign:ButtonAssist.CornerRadius="22" FontSize="16" Height="45" Width="151" Margin="5 0 0 0" Foreground="#42389D" Click="BtnAdmin_Click" Style="{StaticResource MaterialDesignFlatButton}"/>
                 </StackPanel>
             </Grid>
             

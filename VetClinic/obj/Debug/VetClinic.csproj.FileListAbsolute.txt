@@ -24,7 +24,6 @@ C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetCli
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.csproj.CopyComplete
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.exe
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\VetClinic.pdb
-<<<<<<< HEAD
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUC.g.cs
 C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\AdminUC.baml
 C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\VetClinic.exe.config
@@ -66,5 +65,7 @@ C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\obj\Debug\AdminUsers.g.cs
 C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\WpfAnimatedGif.dll
 C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\WpfAnimatedGif.pdb
 C:\Users\Miao\Source\Repos\AnimalClinic\VetClinic\bin\Debug\WpfAnimatedGif.xml
-=======
->>>>>>> b76f5c082cd66dcd95346b4865545fb8050b8e91
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.g.cs
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\obj\Debug\HomeUC.g.cs
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\obj\Debug\AppointmentUC.baml
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\obj\Debug\HomeUC.baml
