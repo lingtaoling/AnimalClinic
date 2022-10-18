@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\obj\Debug\
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\obj\Debug\
 VetClinic
 none
 false
 DEBUG;TRACE
-C:\Users\edgar\OneDrive\Documents\GitHub\AnimalClinic\VetClinic\App.xaml
+C:\Users\Miao\source\repos\AnimalClinic\VetClinic\App.xaml
 6-1404749398
 2994643161
-211877252663
-21898675851
+23-1153924318
+21-2060582833
 AppointmentUC.xaml;HomeUC.xaml;AdminUsers.xaml;Login.xaml;MainWindow.xaml;Register.xaml;
 
-True
+False
 

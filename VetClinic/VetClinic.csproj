@@ -75,10 +75,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminUsers.xaml.cs">
+      <DependentUpon>AdminUsers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Appointment.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="AppointmentPartial.cs" />
     <Compile Include="Avatar.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
     </Compile>
@@ -88,6 +90,12 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentUC.xaml.cs">
+      <DependentUpon>AppointmentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeUC.xaml.cs">
+      <DependentUpon>HomeUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="Owner.cs">
       <DependentUpon>VetDbContext.tt</DependentUpon>
