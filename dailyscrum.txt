@@ -4,6 +4,32 @@
 3. Where do I need assistance? What do I need to figure out?
 
 
+
+
+----------------------------------------------------------------------------------
+2022/10/19 Ling
+1. Done / not done since last scrum:
+- Coding Add user, add pet, add owner dialogs 
+- Fixing opening, closing windows bugs
+
+2. To do until next Scrum:
+- Finishing CRUD prescriprion functions
+
+3. Where do I need assistance? What do I need to figure out?
+- Needing help to fix the clicking windows
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----------------------------------------------------------------------------------
 2022/10/18 Ling
 1. Done / not done since last scrum:
